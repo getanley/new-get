@@ -1,42 +1,72 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Contact Form Validation</title>
+    <title>calculator app</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Contact </h1>
-    <form id="contactForm">
-        <div>
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
-            <div class="error-message" id="firstNameError"></div>
+<div class="container">
+<div class="calculator">
+    <form >
+        <div class="display">
+            <input type="text" name="display">
         </div>
-        <br> <br>
+
         <div>
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
-            <div class="error-message" id="lastNameError"></div>
+            <input type="text" value="AC" onclick="display.value ='' " class="opertor">
+            <input type="text" value="DE" onclick="display.value =display.value.tostring().slice(0,-1)" class="opertor">
+            <input type="text" value="." onclick="display.value +='.'" class="opertor">
+            <input type="text" value="/" onclick="display.value +='/'" class="opertor">
         </div>
-        <br><br>
+
         <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            <div class="error-message" id="emailError"></div>
+            <input type="text" value="7" onclick="display.value +='7'">
+            <input type="text" value="8" onclick="display.value +='8'">
+            <input type="text" value="9"onclick="display.value +='9'">
+            <input type="text" value="*"onclick="display.value +='*'" class="opertor">
         </div>
-        <br> <br>
+
         <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            <div class="error" id="passwordError"></div>
+            <input type="text" value="4"onclick="display.value +='4'">
+            <input type="text" value="5" onclick="display.value +='5'">
+            <input type="text" value="6" onclick="display.value +='6'">
+            <input type="text" value="-" onclick="display.value +='-'" class="opertor">
         </div>
-        <br> <br>
-        <button type="submit" id="submitBtn" >Submit</button>
+
+
+
+        <div>
+            <input type="text" value="1" onclick="display.value +='1'">
+            <input type="text" value="2" onclick="display.value +='2'">
+            <input type="text" value="3" onclick="display.value +='3'">
+            <input type="text" value="+" onclick="display.value +='+'" class="opertor">
+        </div>
+
+        <div>
+            <input type="text" value="00" onclick="display.value +='00'">
+            <input type="text" value="0" onclick="display.value +='0'">
+            <input type="text" value="=" onclick="display.value = eval(display.value)" class= "equal" class="opertor">
+            
+        </div>
     </form>
-    <div class="success" id="successMessage"></div>
-    
-    <script src="validation.js"></script>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+    <script src="script.js"></script>
 </body>
 </html>
